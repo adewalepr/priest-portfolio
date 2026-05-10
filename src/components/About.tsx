@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -46,15 +47,12 @@ const About = () => {
           >
             <div className="aspect-square rounded-3xl glass overflow-hidden relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 group-hover:opacity-100 transition-opacity" />
-              <div className="absolute inset-0 flex items-center justify-center p-12">
-                 {/* This would be an image of Priest Adewale, using a placeholder for now */}
-                 <div className="text-center">
-                    <div className="w-32 h-32 rounded-full bg-border mx-auto mb-6 flex items-center justify-center">
-                      <span className="text-4xl font-bold text-muted">PA</span>
-                    </div>
-                    <p className="text-sm text-muted italic">Building from the heart of tech</p>
-                 </div>
-              </div>
+              <Image 
+                src="/avatar.png" 
+                alt="Priest Adewale" 
+                fill 
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              />
             </div>
             
             {/* Stats */}

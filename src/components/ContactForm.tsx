@@ -45,16 +45,16 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <p className="text-xs text-muted uppercase font-bold tracking-wider">Email Me</p>
-                  <p className="text-foreground font-medium">priest@example.com</p>
+                  <p className="text-foreground font-medium">priest@adewale.dev</p>
                 </div>
               </a>
-              <a href="https://linkedin.com" className="flex items-center gap-4 group">
+              <a href="https://linkedin.com/in/adewalepr" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-xl glass flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                   <Linkedin size={20} />
                 </div>
                 <div>
                   <p className="text-xs text-muted uppercase font-bold tracking-wider">Connect</p>
-                  <p className="text-foreground font-medium">LinkedIn Profile</p>
+                  <p className="text-foreground font-medium">adewalepr</p>
                 </div>
               </a>
               <div className="flex items-center gap-4 group">
@@ -63,7 +63,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <p className="text-xs text-muted uppercase font-bold tracking-wider">GitHub</p>
-                  <p className="text-foreground font-medium">PriestAdewale</p>
+                  <p className="text-foreground font-medium">adewalepr</p>
                 </div>
               </div>
             </div>

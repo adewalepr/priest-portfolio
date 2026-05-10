@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 
 const projects = [
@@ -10,7 +11,7 @@ const projects = [
     description: "An AI-powered educational assistant that helps students ask questions and study smarter using OpenAI.",
     tech: ["React", "OpenAI API", "Node.js", "Vercel"],
     link: "https://ai-student-assistant-one.vercel.app/",
-    github: "#",
+    github: "https://github.com/adewalepr/sentinel-payment-resolver1",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop"
   },
   {
@@ -18,7 +19,7 @@ const projects = [
     description: "A payment resolution and automation platform designed to streamline transaction tracking and issues.",
     tech: ["React", "Airtable", "Make.com", "Flutterwave"],
     link: "https://sentinel-payment-resolver1.onrender.com",
-    github: "#",
+    github: "https://github.com/adewalepr/sentinel-payment-resolver1",
     image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop"
   },
   {
@@ -26,7 +27,7 @@ const projects = [
     description: "A modern platform for fashion products with authentication, browsing, and responsive UI.",
     tech: ["React", "Tailwind CSS", "Node.js"],
     link: "https://ecommerce-three-gamma-96.vercel.app/",
-    github: "#",
+    github: "https://github.com/adewalepr/sentinel-payment-resolver1",
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop"
   },
   {
@@ -34,7 +35,7 @@ const projects = [
     description: "A smart apartment booking system with automated workflows and payment integration.",
     tech: ["Softr", "Airtable", "Make.com", "Flutterwave"],
     link: "#",
-    github: "#",
+    github: "https://github.com/adewalepr/sentinel-payment-resolver1",
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop"
   }
 ];
@@ -66,10 +67,11 @@ const Projects = () => {
               className="group relative"
             >
               <div className="relative aspect-[16/9] rounded-3xl overflow-hidden glass mb-6">
-                <img 
+                <Image 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
                 

@@ -52,10 +52,10 @@ const Navbar = () => {
             ))}
             <div className="h-4 w-[1px] bg-border mx-2" />
             <div className="flex items-center space-x-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
+              <a href="https://github.com/adewalepr" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
                 <Github size={18} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
+              <a href="https://linkedin.com/in/adewalepr" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-foreground transition-colors">
                 <Linkedin size={18} />
               </a>
             </div>
