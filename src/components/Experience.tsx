@@ -28,9 +28,9 @@ const journey = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-64 bg-background">
+    <section id="experience" className="py-32 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-24">
+        <div className="text-center mb-16">
           <h2 className="text-sm font-semibold text-primary uppercase tracking-[0.2em] mb-4">The Journey</h2>
           <h3 className="text-4xl font-bold tracking-tight">Milestones & <span className="gradient-text">Experience.</span></h3>
         </div>

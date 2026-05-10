@@ -39,9 +39,9 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-64 relative overflow-hidden">
+    <section id="services" className="py-32 relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-24">
+        <div className="text-center mb-16">
           <h2 className="text-sm font-semibold text-primary uppercase tracking-[0.2em] mb-4">My Services</h2>
           <h3 className="text-4xl font-bold tracking-tight">How I Can <span className="gradient-text">Help You.</span></h3>
         </div>

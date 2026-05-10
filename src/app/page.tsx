@@ -18,7 +18,7 @@ export default function Home() {
       
       <Hero />
       
-      <div className="border-t border-white/5 bg-white/[0.01]">
+      <div className="border-t border-white/5">
         <About />
       </div>
       
@@ -26,7 +26,7 @@ export default function Home() {
         <TechStack />
       </div>
       
-      <div className="border-t border-white/5 bg-white/[0.01]">
+      <div className="border-t border-white/5">
         <Projects />
       </div>
       
@@ -34,7 +34,7 @@ export default function Home() {
         <Experience />
       </div>
       
-      <div className="border-t border-white/5 bg-white/[0.01]">
+      <div className="border-t border-white/5">
         <Services />
       </div>
       

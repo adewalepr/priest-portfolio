@@ -44,9 +44,9 @@ const mobileApps = ["Piano App", "Quizzler App", "Magic 8 App", "Attendance App"
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-64 relative">
+    <section id="projects" className="py-32 relative">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div>
             <h2 className="text-sm font-semibold text-primary uppercase tracking-[0.2em] mb-4">Portfolio</h2>
             <h3 className="text-4xl font-bold tracking-tight">Featured <span className="gradient-text">Projects.</span></h3>

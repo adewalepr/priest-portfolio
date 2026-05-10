@@ -21,7 +21,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-64 relative overflow-hidden">
+    <section id="contact" className="py-32 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16">
           <motion.div
