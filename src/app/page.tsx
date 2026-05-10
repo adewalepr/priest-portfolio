@@ -15,13 +15,33 @@ export default function Home() {
     <main className="min-h-screen bg-background selection:bg-primary/30 selection:text-primary">
       <ScrollProgress />
       <Navbar />
+      
       <Hero />
-      <About />
-      <TechStack />
-      <Projects />
-      <Experience />
-      <Services />
-      <ContactForm />
+      
+      <div className="border-t border-white/5 bg-white/[0.01]">
+        <About />
+      </div>
+      
+      <div className="border-t border-white/5">
+        <TechStack />
+      </div>
+      
+      <div className="border-t border-white/5 bg-white/[0.01]">
+        <Projects />
+      </div>
+      
+      <div className="border-t border-white/5">
+        <Experience />
+      </div>
+      
+      <div className="border-t border-white/5 bg-white/[0.01]">
+        <Services />
+      </div>
+      
+      <div className="border-t border-white/5">
+        <ContactForm />
+      </div>
+      
       <Footer />
       
       {/* Background Decor */}

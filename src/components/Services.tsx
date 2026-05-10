@@ -39,7 +39,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-40 relative overflow-hidden">
+    <section id="services" className="py-64 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-24">
           <h2 className="text-sm font-semibold text-primary uppercase tracking-[0.2em] mb-4">My Services</h2>

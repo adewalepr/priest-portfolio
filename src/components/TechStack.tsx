@@ -12,7 +12,7 @@ const techData = [
 
 const TechStack = () => {
   return (
-    <section id="tech" className="py-40 bg-background relative overflow-hidden">
+    <section id="tech" className="py-64 bg-background relative overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-24">
           <h2 className="text-sm font-semibold text-primary uppercase tracking-[0.2em] mb-4">Core Stack</h2>
