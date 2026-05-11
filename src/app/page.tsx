@@ -443,13 +443,14 @@ function Services() {
         </h2>
         <ul className="border-b border-border/40">
           {services.map((s, i) => (
-            <motion.li
+            <motion.a
               key={s}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="group flex items-center justify-between py-10 md:py-14 border-t border-border/40 cursor-default hover:bg-secondary/5 px-4 transition-colors"
+              href="#contact"
+              className="group flex items-center justify-between py-10 md:py-14 border-t border-border/40 hover:bg-secondary/5 px-4 transition-colors"
             >
               <div className="flex items-center gap-10 md:gap-16">
                 <span className="text-[10px] text-muted-foreground/40 tracking-[0.3em] font-bold">{String(i + 1).padStart(2, "0")}</span>
@@ -458,7 +459,7 @@ function Services() {
                 </span>
               </div>
               <ArrowUpRight className="h-6 w-6 md:h-8 md:w-8 opacity-20 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-700" />
-            </motion.li>
+            </motion.a>
           ))}
         </ul>
       </div>
