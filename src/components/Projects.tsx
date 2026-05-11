@@ -48,15 +48,15 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div>
-            <h2 className="text-sm font-semibold text-primary uppercase tracking-[0.2em] mb-4">Portfolio</h2>
-            <h3 className="text-4xl font-bold tracking-tight">Featured <span className="gradient-text">Projects.</span></h3>
+            <h2 className="text-sm font-semibold text-primary uppercase tracking-[0.3em] mb-4">Portfolio</h2>
+            <h3 className="text-5xl font-bold tracking-tight">Featured <span className="gradient-text">Work.</span></h3>
           </div>
           <p className="max-w-md text-muted text-lg">
-            A selection of my best work, ranging from AI applications to complex automation systems.
+            A collection of high-impact digital products, from AI-driven ecosystems to premium e-commerce.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[350px]">
           {projects.map((project, idx) => (
             <motion.div
               key={project.title}
@@ -64,62 +64,45 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="group relative"
+              className={`group relative rounded-[2.5rem] overflow-hidden border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] transition-all duration-700 ${
+                idx === 0 ? 'md:col-span-8 md:row-span-2' : 
+                idx === 1 ? 'md:col-span-4 md:row-span-2' :
+                'md:col-span-6 md:row-span-1'
+              }`}
             >
-              <div className="relative aspect-[16/9] rounded-3xl overflow-hidden glass mb-6">
+              <div className="absolute inset-0 z-0">
                 <Image 
                   src={project.image} 
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60"
+                  alt={project.title} 
+                  fill 
+                  className="object-cover opacity-30 group-hover:opacity-50 group-hover:scale-105 transition-all duration-1000"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
-                
-                <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-                  <div className="flex gap-2">
-                    {project.tech.map(t => (
-                      <span key={t} className="px-2 py-1 rounded-md bg-white/10 backdrop-blur-md text-[10px] font-bold text-white uppercase tracking-wider">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex gap-3">
-                    <a href={project.github} className="p-3 rounded-full glass hover:bg-white/10 text-white transition-all">
-                      <Github size={20} />
-                    </a>
-                    <a href={project.link} className="p-3 rounded-full bg-primary text-white hover:scale-110 transition-all shadow-lg shadow-primary/20">
-                      <ExternalLink size={20} />
-                    </a>
-                  </div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-[#030303]/50 to-transparent" />
               </div>
 
-              <div className="px-2">
-                <h4 className="text-2xl font-bold mb-3 flex items-center gap-2 group-hover:text-primary transition-colors">
-                  {project.title}
-                  <ArrowUpRight size={20} className="opacity-0 group-hover:opacity-100 transition-all -translate-y-1" />
-                </h4>
-                <p className="text-muted leading-relaxed mb-4">
+              <div className="absolute inset-0 p-8 flex flex-col justify-end z-10">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tech.map(t => (
+                    <span key={t} className="px-3 py-1 rounded-full bg-white/5 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider text-primary border border-primary/20">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <h4 className="text-3xl font-bold mb-4 text-white group-hover:text-primary transition-colors">{project.title}</h4>
+                <p className="text-muted text-sm mb-6 max-w-md opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                   {project.description}
                 </p>
+                <div className="flex items-center gap-4">
+                  <a href={project.github} target="_blank" className="p-3 rounded-full bg-white/5 border border-white/10 hover:bg-primary hover:border-primary transition-all text-white">
+                    <Github size={20} />
+                  </a>
+                  <a href={project.link} target="_blank" className="p-3 rounded-full bg-white/5 border border-white/10 hover:bg-primary hover:border-primary transition-all text-white">
+                    <ExternalLink size={20} />
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}
-        </div>
-
-        {/* Mobile Apps Section */}
-        <div className="mt-24 p-12 rounded-[3rem] glass relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[100px]" />
-          <div className="relative z-10">
-            <h4 className="text-2xl font-bold mb-8">Mobile App Showcase</h4>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {mobileApps.map((app) => (
-                <div key={app} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/30 transition-all text-center">
-                  <p className="font-semibold text-muted hover:text-foreground transition-colors">{app}</p>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>
