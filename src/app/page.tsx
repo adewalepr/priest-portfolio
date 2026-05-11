@@ -1,27 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Mail, Github, Linkedin, MoveRight } from "lucide-react";
-import { motion, useScroll, useSpring, useTransform, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
-import portrait from "@/assets/portrait.jpg";
+"use client";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Priest Adewale — Full-Stack Developer & AI Engineer" },
-      {
-        name: "description",
-        content:
-          "Portfolio of Priest Adewale — full-stack developer building modern web, mobile, and AI-powered systems.",
-      },
-      { property: "og:title", content: "Priest Adewale — Full-Stack Developer" },
-      {
-        property: "og:description",
-        content: "Modern web & AI-powered systems. Frontend engineering, mobile, and automation.",
-      },
-    ],
-  }),
-  component: Index,
-});
+import { ArrowUpRight, Mail, Github, Linkedin, MoveRight } from "lucide-react";
+import { motion, useScroll, useSpring } from "framer-motion";
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import portrait from "@/assets/portrait.jpg";
 
 const stack = {
   Frontend: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "React Native", "Tailwind"],
@@ -53,7 +36,7 @@ const services = [
   "UI/UX Implementation",
 ];
 
-function Index() {
+export default function Page() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -284,7 +267,7 @@ function About() {
           >
             <div className="aspect-[4/5] overflow-hidden bg-secondary/40 rounded-sm relative group shadow-2xl">
               <div className="absolute inset-0 bg-background/20 mix-blend-overlay group-hover:bg-transparent transition-all duration-700" />
-              <img src={portrait} alt="Priest Adewale" className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105 transition-all duration-1000" />
+              <Image src={portrait} alt="Priest Adewale" className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105 transition-all duration-1000" />
             </div>
             <div className="mt-10 grid grid-cols-2 gap-10">
               <div className="reveal">
@@ -567,5 +550,3 @@ function Footer() {
     </footer>
   );
 }
-
-
