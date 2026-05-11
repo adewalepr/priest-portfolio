@@ -505,7 +505,7 @@ function Contact() {
           </div>
           <div className="md:col-span-6 space-y-2 border-t border-background/10">
             <ContactRow icon={<Mail className="h-4 w-4" />} label="Email" value="priest@adewale.dev" href="mailto:priest@adewale.dev" />
-            <ContactRow icon={<Linkedin className="h-4 w-4" />} label="LinkedIn" value="adewalepr" href="https://linkedin.com/in/adewalepr" />
+            <ContactRow icon={<Linkedin className="h-4 w-4" />} label="LinkedIn" value="priest-adewale" href="https://linkedin.com/in/priest-adewale-14155a403" />
             <ContactRow icon={<Github className="h-4 w-4" />} label="GitHub" value="adewalepr" href="https://github.com/adewalepr" />
           </div>
         </div>
