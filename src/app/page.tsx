@@ -4,7 +4,7 @@ import { ArrowUpRight, Mail, Github, Linkedin, MoveRight } from "lucide-react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import portrait from "@/assets/portrait.jpg";
+import portrait from "@/assets/image.png";
 
 const stack = {
   Frontend: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "React Native", "Tailwind"],
@@ -47,7 +47,7 @@ export default function Page() {
   return (
     <div className="grain min-h-screen bg-background text-foreground selection:bg-foreground selection:text-background cursor-none">
       <CustomCursor />
-      <motion.div 
+      <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-foreground z-[100] origin-left"
         style={{ scaleX }}
       />
@@ -113,22 +113,22 @@ function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border/40">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 h-16 flex items-center justify-between">
-        <motion.a 
+        <motion.a
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          href="#top" 
+          href="#top"
           className="serif text-2xl tracking-tighter hover:opacity-70 transition-opacity"
         >
           Priest<span className="italic text-muted-foreground opacity-60">.adewale</span>
         </motion.a>
         <nav className="hidden md:flex items-center gap-10 text-[10px] uppercase tracking-[0.25em] font-medium">
           {links.map(([l, h], i) => (
-            <motion.a 
-              key={l} 
+            <motion.a
+              key={l}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              href={h} 
+              href={h}
               className="hover:text-muted-foreground transition-colors relative group"
             >
               {l}
@@ -153,7 +153,7 @@ function Hero() {
   return (
     <section id="top" className="pt-40 md:pt-56 pb-24 md:pb-36 px-6 md:px-10">
       <div className="mx-auto max-w-[1400px]">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center gap-4 text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-12"
@@ -161,9 +161,9 @@ function Hero() {
           <span className="h-px w-12 bg-foreground/30" />
           <span>Portfolio — Vol. 01 / MMXXVI</span>
         </motion.div>
-        
+
         <h1 className="serif text-[15vw] md:text-[11vw] leading-[0.82] tracking-[-0.04em]">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
@@ -171,7 +171,7 @@ function Hero() {
           >
             Modern web,
           </motion.span>
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
@@ -179,7 +179,7 @@ function Hero() {
           >
             crafted
           </motion.span>
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
@@ -190,7 +190,7 @@ function Hero() {
         </h1>
 
         <div className="mt-16 grid md:grid-cols-12 gap-10 items-end">
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, delay: 0.5 }}
@@ -198,8 +198,8 @@ function Hero() {
           >
             Hi, I'm <span className="font-semibold text-foreground">Priest Adewale</span> — a full-stack developer architecting high-performance frontends, scalable mobile apps and intelligent automation.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
@@ -258,7 +258,7 @@ function About() {
       <div className="mx-auto max-w-[1400px]">
         <SectionLabel n="01" label="About" />
         <div className="grid md:grid-cols-12 gap-16 md:gap-24 items-start">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -280,9 +280,9 @@ function About() {
               </div>
             </div>
           </motion.div>
-          
+
           <div className="md:col-span-7">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -294,7 +294,7 @@ function About() {
               <br />
               code & creativity.
             </motion.h2>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -310,10 +310,10 @@ function About() {
               <p className="text-lg md:text-xl opacity-70">
                 Whether it's a fintech platform, an AI educator, or a luxury storefront — I focus on performance, scale, and human-centric design.
               </p>
-              
+
               <div className="pt-10">
                 <a href="#contact" className="group inline-flex items-center gap-3 text-xs uppercase tracking-[0.3em] font-bold border-b border-foreground/20 pb-2 hover:border-foreground transition-all">
-                  Read Full Bio 
+                  Read Full Bio
                   <MoveRight className="h-4 w-4 group-hover:translate-x-2 transition-transform" />
                 </a>
               </div>
@@ -335,8 +335,8 @@ function Stack() {
         </h2>
         <div className="grid md:grid-cols-4 gap-px bg-border/40 border border-border/40">
           {Object.entries(stack).map(([cat, items], idx) => (
-            <motion.div 
-              key={cat} 
+            <motion.div
+              key={cat}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -412,8 +412,8 @@ function Journey() {
         </h2>
         <div className="grid md:grid-cols-2 gap-px bg-border/40 border border-border/40">
           {journey.map((j, i) => (
-            <motion.div 
-              key={i} 
+            <motion.div
+              key={i}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -471,14 +471,14 @@ function Contact() {
   return (
     <section id="contact" className="px-6 md:px-10 py-32 md:py-56 border-t border-border/40 bg-foreground text-background relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-background/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3" />
-      
+
       <div className="mx-auto max-w-[1400px] relative z-10">
         <div className="flex items-center gap-6 text-[10px] uppercase tracking-[0.4em] text-background/40 mb-16">
           <span className="font-bold">(06)</span>
           <span className="h-px flex-1 bg-background/10" />
           <span className="font-bold">Get In Touch</span>
         </div>
-        
+
         <h2 className="serif text-7xl md:text-[9.5vw] leading-[0.85] tracking-[-0.04em]">
           Let's build
           <br />
@@ -486,14 +486,14 @@ function Contact() {
           <br />
           extraordinary.
         </h2>
-        
+
         <div className="mt-24 grid md:grid-cols-12 gap-16 items-start">
           <div className="md:col-span-6">
             <p className="text-xl md:text-2xl text-background/60 max-w-md leading-relaxed font-light">
               Whether you have a question, a project idea, or just want to say hi — my inbox is always open.
             </p>
             <div className="mt-12">
-              <motion.a 
+              <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="mailto:priesthood812@gmail.com"
