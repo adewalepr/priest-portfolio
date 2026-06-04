@@ -479,7 +479,7 @@ function Contact() {
           <span className="font-bold">Get In Touch</span>
         </div>
 
-        <h2 className="serif text-7xl md:text-[9.5vw] leading-[0.85] tracking-[-0.04em]">
+        <h2 className="serif text-5xl sm:text-7xl md:text-[9.5vw] leading-[0.85] tracking-[-0.04em]">
           Let's build
           <br />
           <span className="italic text-background/50">something</span>
@@ -519,15 +519,15 @@ function ContactRow({ icon, label, value, href }: { icon: React.ReactNode; label
   return (
     <a
       href={href}
-      className="group flex items-center justify-between py-8 border-b border-background/10"
+      className="group flex flex-col sm:flex-row sm:items-center justify-between py-6 sm:py-8 border-b border-background/10 gap-2"
     >
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-4">
         <span className="text-background/30 group-hover:text-background transition-colors">{icon}</span>
         <span className="text-[9px] uppercase tracking-[0.3em] text-background/40 font-bold">{label}</span>
       </div>
-      <div className="flex items-center gap-4 serif text-3xl md:text-4xl group-hover:italic group-hover:-translate-x-2 transition-all duration-500">
-        {value}
-        <ArrowUpRight className="h-5 w-5 opacity-30 group-hover:opacity-100 group-hover:rotate-45 transition-all" />
+      <div className="flex items-center justify-between sm:justify-start gap-4 serif text-xl sm:text-3xl md:text-4xl group-hover:italic group-hover:-translate-x-2 transition-all duration-500 w-full sm:w-auto">
+        <span className="truncate sm:overflow-visible">{value}</span>
+        <ArrowUpRight className="h-5 w-5 opacity-30 group-hover:opacity-100 group-hover:rotate-45 transition-all shrink-0" />
       </div>
     </a>
   );
